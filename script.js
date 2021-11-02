@@ -65,20 +65,34 @@ const rubrica = [
   }
 ]
 
-/*
-console.log([]);
 
-names.forEach((element, index) => {
-    console.log(element, index);
-    names[index] = element.toLocaleUpperCase();
+/*
+const newRubrica = [];
+rubrica.forEach((element) => {
+    return newRubrica.push(element.name, element.email);
+});
+
+console.log(newRubrica);
+*/
+
+/*
+Metti qualsiasi cosa in un array usando Array.push().
+
+var a=[], b={};
+a.push(b);    
+// a[0] === b;
+*/
+
 
 const newRubrica = [];
-rubrica.forEach(element => newRubrica.push(element.name, element.email));
+rubrica.forEach((element) => {
+    return newRubrica.push({ name: element.name.toLowerCase(), email: element.email.toLowerCase()});
+    
+});
 
 console.log(newRubrica);
 
 /*
-names.forEach((element, index) => {
-    console.log(element, index);
-    names[index] = element.toLocaleUpperCase();
-    */
+Console:
+(10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]0: {name: 'leanne graham', email: 'sincere@april.biz'}1: {name: 'ervin howell', email: 'shanna@melissa.tv'}2: {name: 'clementine bauch', email: 'nathan@yesenia.net'}3: {name: 'patricia lebsack', email: 'julianne.oconner@kory.org'}4: {name: 'chelsey dietrich', email: 'lucio_hettinger@annie.ca'}5: {name: 'mrs. dennis schulist', email: 'karley_dach@jasper.info'}6: {name: 'kurtis weissnat', email: 'telly.hoeger@billy.biz'}7: {name: 'nicholas runolfsdottir v', email: 'sherwood@rosamond.me'}8: {name: 'glenna reichert', email: 'chaim_mcdermott@dana.io'}9: {name: 'clementina dubuque', email: 'rey.padberg@karina.biz'}length: 10[[Prototype]]: Array(0)
+*/
